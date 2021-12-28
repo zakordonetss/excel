@@ -1,0 +1,19 @@
+@import "variables"
+@import "mixins"
+
+.Toolbar
+  position: absolute
+  left: 0
+  right: 0
+  top: $headerHeight
+
+  height: $toolbarHeight
+  padding: $padding 10px
+
+  display: flex
+
+  border-top: $borderStyle
+  border-bottom: $borderStyle
+
+  &-Button
+    @include button(green)

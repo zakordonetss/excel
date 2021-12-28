@@ -1,0 +1,37 @@
+@import "variables"
+@import "mixins"
+
+.Header
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+
+  height: $headerHeight
+  padding: $padding ($padding / 2) 0
+
+  display: flex
+  justify-content: space-between
+
+  &-Input
+    height: 20px
+    min-width: 1px
+    margin: 0
+    padding: ($spacing / 4) $spacing
+
+    color: $black
+    font-size: $fontSize
+    line-height: 22px
+    outline: none
+
+    border: 1px solid transparent
+    border-radius: $borderRadius
+
+    &:hover
+      border: $borderStyle
+
+    &:focus
+      border: 2px solid $accent
+
+  &-Button
+    @include button(red)
