@@ -1,0 +1,90 @@
+@import "variables"
+@import "mixins"
+
+$bgColor: #fff
+$newSectionBgColor: #dadce0
+$listHeaderColor: #202124
+$recordsHoverBgColor: #e6f4ea
+
+.DashBoard
+
+  &-Header
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+
+    height: $dashBoardHeaderHeight
+    z-index: 1000
+
+    @include centering()
+
+    background: $bgColor
+    box-shadow: 0 2px 5px 2px rgba(60, 64, 67, .15)
+
+  &-New
+    margin-top: $dashBoardHeaderHeight
+    padding: 1.5rem
+    background: $newSectionBgColor
+
+  &-View
+    max-width: 1000px
+    margin: 0 auto
+
+  &-Create
+    width: 160px
+    height: 160px
+    background: $bgColor
+
+    border-radius: $borderRadius * 2
+    border: 1px solid $newSectionBgColor
+
+    @include centering()
+
+    font-size: 1.5rem
+    text-decoration: none
+    color: $black
+    text-align: center
+
+    &:hover
+      cursor: pointer
+      color: green
+      border-color: green
+
+  &-Table
+    padding: 1rem
+
+  &-ListHeader
+    display: flex
+    justify-content: space-between
+
+    color: $listHeaderColor
+    font-weight: 500
+    font-size: 16px
+
+    margin-bottom: 10px
+    padding: 0 12px
+
+  &-List
+    @include clearList()
+
+  &-Record
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    padding: 12px 14px 12px 16px
+    margin-bottom: 10px
+
+    &:hover
+      background: $recordsHoverBgColor
+      border-radius: 25px
+
+    a
+      text-decoration: none
+      cursor: pointer
+      color: $listHeaderColor
+      font-size: 14px
+
+      &:hover
+        text-decoration: underline

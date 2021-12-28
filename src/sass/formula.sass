@@ -1,0 +1,33 @@
+@import "variables"
+@import "mixins"
+
+.Formula
+  position: absolute
+  left: 0
+  right: 0
+  top: $headerHeight + $toolbarHeight
+
+  height: $formulaHeight
+
+  display: flex
+  align-items: center
+
+  border-bottom: $borderStyle
+
+  &-Info
+    font-size: $fontSize
+    font-style: italic
+    text-align: center
+    border-right: $borderStyle
+
+    min-width: $infoCellWidth
+
+  &-Input
+    width: 100%
+    height: 100%
+    padding: $padding / 2
+
+    font-size: 12px
+    outline: none
+
+    color: $black
